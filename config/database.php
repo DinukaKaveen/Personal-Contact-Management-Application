@@ -39,7 +39,6 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-<<<<<<< HEAD
         'mysql'   => [
             'driver'         => 'mysql',
             'url'            => env('DB_URL'),
@@ -52,20 +51,6 @@ return [
             'charset'        => env('DB_CHARSET', 'utf8mb4'),
             'collation'      => env('DB_COLLATION', 'utf8mb4_general_ci'),
             'prefix'         => '',
-=======
-        'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => env('DB_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COLLATION', 'utf8mb4_general_ci'),
-            'prefix' => '',
->>>>>>> a5a078c6c7c89b324fa9aa23c725205cc24d60fa
             'prefix_indexes' => true,
             'strict'         => true,
             'engine'         => null,
