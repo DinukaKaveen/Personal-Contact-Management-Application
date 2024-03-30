@@ -1,0 +1,14 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
+
+
+Route::get('contacts', [ContactController::class, 'get_contacts']);
+Route::post('create_contact', [ContactController::class, 'create_contact']);
+Route::delete('delete_contact/{id}', [ContactController::class, 'delete_contact']);
