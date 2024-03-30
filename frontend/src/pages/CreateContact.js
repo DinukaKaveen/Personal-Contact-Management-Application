@@ -5,12 +5,12 @@ function CreateContact() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
+  const [phone, setPhoneNo] = useState("");
   const [note, setNote] = useState("");
 
   const Submit = async (e) => {
     e.preventDefault();
-    const contact = { name, email, phoneNo, note };
+    const contact = { name, email, phone, note };
 
     await axios
       .post("http://localhost:8000/api/create_contact", contact)
@@ -78,7 +78,7 @@ function CreateContact() {
             id="phone"
             name="phone"
             onChange={(e) => setPhoneNo(e.target.value)}
-            value={phoneNo}
+            value={phone}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
